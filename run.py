@@ -1,32 +1,34 @@
 import pygame as pg
+#import pygame
+
 from engine import *
+#import needed variables from engine.py
+
 from src.Player import Player
 from src.UI import Cursor
-#imports
+#import game objects
 
 player = Player(30, 30, 640, 360)
 cursor = Cursor()
-#game objects
+#initialize game objects
 
 def update():
     player.update()
     cursor.update()
-#add ability to update all objects
+#update all game objects in one function
 
 def draw():
     player.draw(window, WHITE)
     cursor.draw(window, WHITE)
-#add ability to draw all objects to the screen
+#draw all game objects in one function
 
 while True:
-    keys = pg.key.get_pressed()
-    
-    if pg.event.get(pg.QUIT) or keys[pg.K_ESCAPE]:
+    if pg.event.get(pg.QUIT) or pg.key.get_pressed()[pg.K_ESCAPE]:
         break
     #exit program when window is closed or ESCAPE key is pressed
     
     window.fill(BLACK)
-    #clear screen
+    #clear screen each frame
     
     update()
     draw()

@@ -1,6 +1,8 @@
 import pygame as pg
+#import pygaame
+
 from engine import window
-#imports
+#import window to keep player on screen
 
 class Player:
     def __init__(self, width:float, height:float, x:float, y:float) -> None:
