@@ -13,12 +13,13 @@ class Player:
         self.speed = 3
         #set player's movement speed
         
-    def update(self) -> None:
+    def update(self, dt) -> None:
+        delta_speed = self.speed * 60 * dt
         pressed_keys = pg.key.get_pressed()
-        key_map = {pg.K_w:(0, -self.speed), 
-                   pg.K_s:(0, self.speed), 
-                   pg.K_a:(-self.speed, 0), 
-                   pg.K_d:(self.speed, 0)}
+        key_map = {pg.K_w:(0, -delta_speed), 
+                   pg.K_s:(0, delta_speed), 
+                   pg.K_a:(-delta_speed, 0), 
+                   pg.K_d:(delta_speed, 0)}
         #map keys WASD to each movement direction
         
         for key in key_map:

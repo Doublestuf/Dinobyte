@@ -1,6 +1,3 @@
-import pygame as pg
-#import pygame
-
 from engine import *
 #import needed variables from engine.py
 
@@ -12,8 +9,10 @@ player = Player(30, 30, 640, 360)
 cursor = Cursor()
 #initialize game objects
 
-def update():
-    player.update()
+def update(dt):
+    player.update(dt)
+    #player requires delta time to normalize movement speed
+    
     cursor.update()
 #update all game objects in one function
 
@@ -30,11 +29,12 @@ while True:
     window.fill(BLACK)
     #clear screen each frame
     
-    update()
+    dt = clock.tick(fps) / 1000
+    
+    update(dt)
     draw()
     #update and draw all objects/sprites
     
-    clock.tick(fps)
     pg.display.update()
     #show changes and restrict framerate
 #game loop
