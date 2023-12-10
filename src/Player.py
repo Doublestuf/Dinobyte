@@ -15,17 +15,31 @@ class Player:
         
     def update(self, dt) -> None:
         delta_speed = self.speed * 60 * dt
+        #adjust speed to be framerate-independent using delta time
+        
         pressed_keys = pg.key.get_pressed()
-        key_map = {pg.K_w:(0, -delta_speed), 
-                   pg.K_s:(0, delta_speed), 
-                   pg.K_a:(-delta_speed, 0), 
-                   pg.K_d:(delta_speed, 0)}
+        #find currently pressed keys
+        
+        movement_vector = pg.math.Vector2(0, 0)
+        #create vector for player movement
+        
+        key_map = {pg.K_w:(0, -1), 
+                   pg.K_s:(0, 1), 
+                   pg.K_a:(-1, 0), 
+                   pg.K_d:(1, 0)}
         #map keys WASD to each movement direction
         
         for key in key_map:
             if pressed_keys[key]:
-                self.rect.move_ip(key_map[key])
-        #move player according to the key map
+                movement_vector += pg.math.Vector2(key_map[key])
+        #add current movement directions to the player movement vector
+        
+        if movement_vector:
+            movement_vector.normalize_ip()
+        #normalize the player movement vector to prevent diagonal movement from being faster than horizontal/vertical movement
+        
+        self.rect.move_ip(movement_vector * delta_speed)
+        #move the player with the normalized movement vector and adjusted speed
         
         self.rect.clamp_ip(window.get_rect())
         #prevent player from moving off-screen
