@@ -13,7 +13,7 @@ class Player:
         self.speed = 3
         #set player's movement speed
         
-    def update(self, dt) -> None:
+    def update(self, dt:float) -> None:
         delta_speed = self.speed * 60 * dt
         #adjust speed to be framerate-independent using delta time
         

@@ -13,7 +13,7 @@ class Cursor:
         self.rect.topleft = pg.mouse.get_pos()
         #set custom cursor position to default cursor position
     
-    def draw(self, surface, color) -> None:
+    def draw(self, surface:pg.Surface, color:pg.Color) -> None:
         if not pg.mouse.get_focused():
             return
         #do not draw custom cursor if mouse is off-screen

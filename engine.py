@@ -10,6 +10,9 @@ else:
     window = pg.display.set_mode((1280, 720))
 #create game window and set in fullscreen if setting is enabled
 
+pg.display.set_caption("Dinobyte")
+#set the title of the game window
+
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GRAY = (128, 128, 128)
