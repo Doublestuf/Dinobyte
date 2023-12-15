@@ -12,7 +12,7 @@ Also yes the name is epik for the reasons below:
 
 Game loop:
     Collect resources
-    Craft tools and armor
     Build base
-    Fight (and tame?) dinosaurs
-    Repeat
+    Craft tools and armor
+    Fight boss dino
+    Repeat until end boss
