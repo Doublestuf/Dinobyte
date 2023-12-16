@@ -35,13 +35,6 @@ def draw():
     
 #draw all game objects in one function
 
-def start_game():
-    generator.generate_trees()
-    #randomly generate trees when game begins
-
-start_game()
-#perform necessary functions before starting the game (start menu, etc.)
-
 while True:
     if pg.event.get(pg.QUIT) or pg.key.get_pressed()[pg.K_ESCAPE]:
         break

@@ -4,11 +4,11 @@ import pygame as pg
 from engine import window
 #import window to keep player on screen
 
-class Player:
+from src.Entity import Entity
+
+class Player(Entity):
     def __init__(self, width:float, height:float, x:float, y:float) -> None:
-        self.rect = pg.Rect(0, 0, width, height)
-        self.rect.center = (x, y)
-        #set player rect's size and location
+        super().__init__(width, height, x, y)
         
         self.speed = 3
         #set player's movement speed
@@ -43,7 +43,3 @@ class Player:
         
         self.rect.clamp_ip(window.get_rect())
         #prevent player from moving off-screen
-    
-    def draw(self, surface:pg.Surface, color:pg.Color) -> None:
-        pg.draw.rect(surface, color, self.rect)
-        #draw player rect to designated surface
