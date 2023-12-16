@@ -13,5 +13,4 @@ Game loop:
     Fight boss dino
     Repeat until end boss
 
-Unique mechanic:
-    The player will use chat commands to craft items (subject to change)
+(Should have replay value for speedrunners)

@@ -1,6 +1,9 @@
 import pygame as pg
 #import pygame
 
+pg.font.init()
+#initialize pygame fonts
+
 fullscreen = False
 #debug variables
 
@@ -25,3 +28,6 @@ fps = 60
 clock = pg.time.Clock()
 game_objects = []
 #variables
+
+default_font_name = pg.font.get_default_font()
+#default font variable

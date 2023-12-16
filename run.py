@@ -8,12 +8,17 @@ from src.UI import Cursor
 from src.Generator import Generator
 #import object generator
 
+from src.MenuScene import MenuScene
+#import scenes
+
 player = Player(30, 30, 640, 360)
 cursor = Cursor()
 #initialize game objects
 
 generator = Generator()
 #initialize object generator
+
+current_scene = MenuScene()
 
 def update(dt:float):
     player.update(dt)
@@ -46,8 +51,8 @@ while True:
     dt = clock.tick(fps) / 1000
     #calculate time between frames
     
-    update(dt)
-    draw()
+    current_scene = current_scene.update()
+    current_scene.draw()
     #update and draw all objects/sprites
     
     pg.display.update()
