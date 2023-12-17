@@ -28,10 +28,6 @@ def update(dt:float):
 #update all game objects in one function
 
 def draw():
-    for entity in generator.entities:
-        entity.draw(window)
-    #draw all randomly generated objects such as trees and rocks
-    
     player.draw(window, WHITE)
     #draw game objects first
     

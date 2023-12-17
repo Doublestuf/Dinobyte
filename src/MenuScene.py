@@ -1,14 +1,9 @@
-import pygame as pg
-
-from engine import *
-
-from src.UI import Cursor
 from src.GameScene import GameScene
+from src.Scene import *
 
-cursor = Cursor()
-    
-class MenuScene:
+class MenuScene(Scene):
     def __init__(self) -> None:
+        super().__init__(True)
         title_font = pg.font.Font(default_font_name, 200)
         self.title_text = title_font.render("Dinobyte", False, WHITE)
         
@@ -24,14 +19,13 @@ class MenuScene:
         self.start_text_rect.top = self.title_text_rect.bottom + 100
         
     def update(self):
-        cursor.update()
         if cursor.rect.colliderect(self.start_text_rect) and pg.event.get(pg.MOUSEBUTTONDOWN):
             return GameScene()
-        
-        return self
+
+        return super().update()
     
     def draw(self):
         window.blit(self.title_text, self.title_text_rect)
         window.blit(self.start_text, self.start_text_rect)
         
-        cursor.draw(window, WHITE)
+        super().draw()
