@@ -11,6 +11,9 @@ Game loop:
     Build base
     Craft tools and armor
     Fight boss dino
-    Repeat until end boss
+    Unlock new area
+    Repeat until boss dino is complete
+
+Unique mechanic - Bullet hell dino boss fights, player must dodge and capture dino to unlock as a pet (may change in the future)
 
 (Should have replay value for speedrunners)

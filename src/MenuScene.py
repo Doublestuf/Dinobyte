@@ -20,7 +20,7 @@ class MenuScene(Scene):
         
     def update(self):
         if cursor.rect.colliderect(self.start_text_rect) and pg.event.get(pg.MOUSEBUTTONDOWN):
-            return GameScene()
+            return GameScene(self)
 
         return super().update()
     

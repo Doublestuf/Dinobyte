@@ -37,7 +37,7 @@ def draw():
 #draw all game objects in one function
 
 while True:
-    if pg.event.get(pg.QUIT) or pg.key.get_pressed()[pg.K_ESCAPE]:
+    if pg.event.get(pg.QUIT):
         break
     #exit program when window is closed or ESCAPE key is pressed
     
