@@ -11,9 +11,6 @@ class Scene:
         self.cursor_visible = cursor_visible
         
     def update(self):
-        if pg.event.get(pg.QUIT):
-            pg.quit()
-        
         if self.cursor_visible:
             cursor.update()
             
