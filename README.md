@@ -7,13 +7,8 @@ Also yes the name is epik for the reasons below:
 3. "byte" is also quite similar to the world "bite", as in being bitten by a dinosaur, which is likely to happen while playing the game
 
 Game loop:
-    Collect resources
-    Build base
-    Craft tools and armor
-    Fight boss dino
-    Unlock new area
-    Repeat until boss dino is complete
-
-Unique mechanic - Bullet hell dino boss fights, player must dodge and capture dino to unlock as a pet (may change in the future)
-
-(Should have replay value for speedrunners)
+Explore to find resources and dinosaurs to tame
+Craft tools and armor to get stronger
+Fight bosses with weapons and tamed dinosaurs
+Unlock new areas
+Repeat until last boss dino
