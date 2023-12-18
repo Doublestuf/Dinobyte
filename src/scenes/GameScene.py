@@ -1,4 +1,4 @@
-from src.Scene import *
+from src.scenes.Scene import *
 from src.Player import Player
 
 class GameScene(Scene):

@@ -1,6 +1,6 @@
 import pygame as pg
 
-from Item import Item
+from inventory.Item import Item
 
 class Inventory:
     def __init__(self) -> None:

@@ -1,5 +1,5 @@
-from src.GameScene import GameScene
-from src.Scene import *
+from src.scenes.GameScene import GameScene
+from src.scenes.Scene import *
 
 class MenuScene(Scene):
     def __init__(self) -> None:

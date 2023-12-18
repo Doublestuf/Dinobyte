@@ -1,7 +1,7 @@
 from engine import *
 #import needed variables from engine.py
 
-from src.MenuScene import MenuScene
+from src.scenes.MenuScene import MenuScene
 #import scenes
 
 current_scene = MenuScene()
@@ -20,5 +20,4 @@ while True:
     
     pg.display.update()
     #show changes
-    
 #game loop
