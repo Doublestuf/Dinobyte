@@ -29,5 +29,5 @@ clock = pg.time.Clock()
 game_objects = []
 #variables
 
-default_font_name = pg.font.get_default_font()
+default_font_name = "assets/pixel_font.ttf"
 #default font variable
